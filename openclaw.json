@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.7",
+    "lastTouchedAt": "2026-03-10T11:20:50.874Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-10T11:20:50.475Z",
+    "lastRunVersion": "2026.3.7",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "custom-127-0-0-1-11434": {
+        "baseUrl": "http://127.0.0.1:11434/v1",
+        "apiKey": "ollama",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen2.5:7b-32k",
+            "name": "qwen2.5:7b-32k (Custom Provider)",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 32768,
+            "maxTokens": 32768
+          }
+        ]
+      },
+      "custom-192-168-9-100-11434": {
+        "baseUrl": "http://192.168.9.100:11434/v1",
+        "apiKey": "qwen3.5:27b-bf16",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen3.5:27b",
+            "name": "qwen3.5:27b (Custom Provider)",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 32768,
+            "maxTokens": 32768
+          },
+          {
+            "id": "qwen3.5:27b-bf16",
+            "name": "qwen3.5:27b-bf16 (Custom Provider)",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 32768,
+            "maxTokens": 32768
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "custom-192-168-9-100-11434/qwen3.5:27b-bf16"
+      },
+      "models": {
+        "custom-127-0-0-1-11434/qwen2.5:7b-32k": {
+          "alias": "ollama"
+        },
+        "custom-192-168-9-100-11434/qwen3.5:27b": {
+          "alias": "ai_meeting"
+        },
+        "custom-192-168-9-100-11434/qwen3.5:27b-bf16": {
+          "alias": "qwen3.5:27b-bf16"
+        }
+      },
+      "workspace": "C:\\Users\\huangxiaolong\\.openclaw\\workspace"
+    }
+  },
+  "tools": {
+    "profile": "full"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "channels": {
+    "feishu": {
+      "appId": "cli_a926e2314bf8dbc7",
+      "appSecret": "d2xCepO3yFbQcRyi3oiGxeWGaGBPDV1x",
+      "enabled": true
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "auto",
+    "auth": {
+      "mode": "token",
+      "token": "efed4e1b23247209722ec830956fc4df83197bd39fbce749"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    }
+  },
+  "plugins": {
+    "allow": [
+      "feishu"
+    ],
+    "entries": {
+      "feishu": {
+        "enabled": true
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "description": "对话对象 ID → 用户名映射表",
+  "users": {
+    "ou_d86ffdee05f6281c11d732f7d1284ddb": {
+      "name": "hongxing",
+      "platforms": ["feishu"],
+      "chat_type": "direct|group_member",  // 私聊或某个群的成员
+      "profile_path": "users/hongxing/",
+      "first_seen": "2026-03-09"
+    }
+  },
+  "groups": {
+    // 格式："feishu_chat_id": { name: "群中文名", path: "users/groups/xxx/" }
+  },
+  "auto_create_new_profile": true,  // 遇新用户是否自动创建目录
+  "privacy_mode": "strict"           // "strict"=群聊不加载私记忆 | "relaxed"=放宽限制
+}
